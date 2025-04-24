@@ -1,0 +1,12 @@
+.card{
+  width: 100%
+}
+
+/* @media (min-width: 768px) {
+  .card {
+    width: 300px;
+  }
+} */
+  .navbar-collapse navbar-toggler {
+  transition: all 3s ease-in-out;
+  }

@@ -1,13 +1,48 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fce8e8;
+  /* خلفية فاتحة عصرية */
+  color: #2c3e50;
+  /* لون نص داكن ولكنه مريح */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: #3498db;
+  /* لون أزرق عصري للروابط */
+}
+
+a:hover {
+  color: #2980b9;
+  /* تأثير التمرير باللون الأزرق الداكن */
+}
+
+button {
+  cursor: pointer;
+  background-color: #3498db;
+  /* زر بلون أزرق عصري */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  /* تأثير التمرير بالزر بلون أزرق داكن */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+
+  /* خلفية بيضاء عصرية */
+
+  /* إضافة ظل خفيف لتمييز الحاوية */
+  border-radius: 8px;
+  /* حواف دائرية ناعمة */
 }
