@@ -11,6 +11,10 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Helmet>
+      <title>أكاديمية T.H - لتعلم الفرونت إند</title>
+      <meta name="description" content="تعلم تطوير الواجهات الأمامية باحتراف مع أكاديمية T.H. كورسات React وHTML وCSS وغيرها." />
+    </Helmet>
     <App />
   </BrowserRouter>
 );
