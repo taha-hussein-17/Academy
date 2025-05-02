@@ -15,12 +15,12 @@ import NewCourse from './pages/NewCourse';
 import EditCourse from './pages/EditCourse';
 import CoursePlayer from './pages/CoursePlayer';
 import JoinCourse from './pages/JoinCourse';
-
+import { Helmet } from "react-helmet"
 function App() {
   return (
     <div className="app">
       <Helmet>
-        <title>أكاديمية T.H - لتعلم الفرونت إند</title>
+        <title>T.H Academy </title>
         <meta name="description" content="تعلم تطوير الواجهات الأمامية باحتراف مع أكاديمية T.H. كورسات React وHTML وCSS وغيرها." />
       </Helmet>
       <Navbar />
