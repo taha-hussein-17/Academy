@@ -16,6 +16,8 @@ import EditCourse from './pages/EditCourse';
 import CoursePlayer from './pages/CoursePlayer';
 import JoinCourse from './pages/JoinCourse';
 import { Helmet } from "react-helmet"
+import Blog from './pages/Blog';
+
 function App() {
   return (
     <div className="app">
@@ -32,6 +34,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/joinCourse" element={<JoinCourse />} />
           <Route path="/dashboard" element={
             <PrivateRoute>

@@ -8,12 +8,15 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/Home.css'; // Create and link your custom CSS
-
+import { useNavigate } from 'react-router-dom';
 function Home() {
   const [latestCourses, setLatestCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [user] = useAuthState(auth);
-
+  const navigate = useNavigate();
+  const goToCourses = () => {
+    navigate('/courses');
+  };
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -26,6 +29,9 @@ function Home() {
           orderBy('createdAt', 'desc'),
           limit(3)
         );
+
+
+
         const snap = await getDocs(q);
         const courses = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setLatestCourses(courses);
@@ -37,7 +43,6 @@ function Home() {
     };
     fetchLatest();
   }, []);
-
   return (
     <div className="home-page" dir="rtl">
       <section className="hero-section">
@@ -133,11 +138,20 @@ function Home() {
         ) : latestCourses.length === 0 ? (
           <p className="no-courses">لا توجد كورسات حالياً.</p>
         ) : (
-          <div className="courses-grid">
-            {latestCourses.map(course => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
+          <>
+            <div className="courses-grid">
+              {latestCourses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))}
+            </div>
+
+                <div style={{ textAlign: "center", marginTop: "20px" }}>
+                  <button className="btn btn-primary" onClick={goToCourses}>
+                    عرض جميع الكورسات <span style={{ marginRight: "5px", border:"none" }}>➡</span>
+                  </button>
+
+                </div>
+          </>
         )}
       </section>
       <section className="testimonials-section" data-aos="fade-up">

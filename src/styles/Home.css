@@ -1,4 +1,9 @@
+@import url("slick-carousel/slick/slick.css");
+@import url("slick-carousel/slick/slick-theme.css");
+
+
 /* Reset بسيط */
+
 body {
   font-family: "Cairo", sans-serif;
   margin: 0;
@@ -107,12 +112,13 @@ ul {
 .latest-courses {
   direction: rtl;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #ffffff, #f7f8fc);
+  background: linear-gradient(135deg, #ffffff, #eaebf2);
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   text-align: center;
   margin: 40px auto;
   max-width: 1200px;
+
 }
 
 .latest-courses h2 {
@@ -441,7 +447,6 @@ ul {
   color: #444;
   line-height: 1.6;
 }
-
 .project-requirements li,
 .project-tech li,
 .project-optional li,

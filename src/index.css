@@ -1,10 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   background-color: #fce8e8;
   /* خلفية فاتحة عصرية */
   color: #2c3e50;
   /* لون نص داكن ولكنه مريح */
+  direction: rtl;
+  font-family: 'Cairo', sans-serif important;
 }
 
 a {
